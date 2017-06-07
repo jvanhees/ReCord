@@ -1,12 +1,11 @@
 import { Message } from 'discord.js';
+import { Config } from './../interfaces/Config';
 
-class RecordHelper {
+export class ReCordHelper {
 
-	private handle: string;
+	private handle: string = '!record';
 
-	constructor(handle: string) {
-		this.handle = handle;
-	}
+	constructor() { }
 
 	public isCalled(message: Message): boolean {
 		return (message.content.toLowerCase().substring(0, this.handle.length) == this.handle);
@@ -16,5 +15,3 @@ class RecordHelper {
 		return message.content.toLowerCase().replace(this.handle, '').trim();
 	}
 }
-
-export { RecordHelper };
