@@ -1,0 +1,31 @@
+{
+  "name": "record",
+  "version": "0.0.1",
+  "description": "A bot that records Discord voice and allows you to create a soundfile from the last 30 seconds.",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec ./node_modules/.bin/ts-node -- ./src/index.ts"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jvanhees/ReCord.git"
+  },
+  "author": "Jorick van Hees",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jvanhees/ReCord/issues"
+  },
+  "homepage": "https://github.com/jvanhees/ReCord#readme",
+  "devDependencies": {
+    "@types/node": "^7.0.28",
+    "nodemon": "^1.11.0",
+    "ts-node": "^3.0.6",
+    "typescript": "^2.3.4"
+  },
+  "dependencies": {
+    "discord.js": "^11.1.0",
+    "node-opus": "^0.2.6",
+    "uws": "^0.14.5"
+  }
+}
